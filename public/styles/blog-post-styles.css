@@ -1,0 +1,192 @@
+h2 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-align: left;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #2c3e50;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.social-share .social-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    /* Ensure circular shape */
+}
+
+.social-share .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-share .btn-success:hover {
+    background-color: #25D366;
+}
+
+.social-share .btn-primary:hover {
+    background-color: #4267B2;
+}
+
+.social-share .btn-info:hover {
+    background-color: #1DA1F2;
+}
+
+.social-share .btn-primary:last-child:hover {
+    background-color: #0077B5;
+}
+
+/* ============================================
+   GLASSMORPHIC ENHANCEMENTS FOR BLOG POSTS
+   ============================================ */
+
+/* Glasmorphic Social Button */
+.social-share .social-btn.glass-enhanced {
+    background: rgba(0, 123, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.social-share .social-btn.glass-enhanced:hover {
+    background: rgba(0, 105, 217, 0.95);
+    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Glasmorphic Blog Post Container */
+.blog-post.glass-enhanced {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Preserve heading colors in glasmorphic containers */
+.blog-post.glass-enhanced h2,
+.blog-post.glass-enhanced h5 {
+    color: #2c3e50 !important;
+}
+
+.blog-post.glass-enhanced p {
+    color: #333 !important;
+}
+
+/* Enhanced Social Share Container */
+.social-share {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(0, 123, 255, 0.2);
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 32px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.social-share h5 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-share:hover h5 {
+    color: #0069d9;
+}
+
+/* Enhanced Social Button */
+.social-share .social-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.social-share .social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    pointer-events: none;
+}
+
+.social-share .social-btn:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+}
+
+.social-share .btn-success {
+    background: linear-gradient(135deg, #25D366 0%, #20a85f 100%);
+}
+
+.social-share .btn-success:hover {
+    background: linear-gradient(135deg, #20a85f 0%, #1a7d47 100%);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.3);
+}
+
+.social-share .btn-primary {
+    background: linear-gradient(135deg, #4267B2 0%, #2f4a8b 100%);
+}
+
+.social-share .btn-primary:hover {
+    background: linear-gradient(135deg, #2f4a8b 0%, #1f2d60 100%);
+    box-shadow: 0 8px 28px rgba(66, 103, 178, 0.3);
+}
+
+.social-share .btn-info {
+    background: linear-gradient(135deg, #1DA1F2 0%, #1a91c7 100%);
+}
+
+.social-share .btn-info:hover {
+    background: linear-gradient(135deg, #1a91c7 0%, #137aa1 100%);
+    box-shadow: 0 8px 28px rgba(29, 161, 242, 0.3);
+}
+
+.social-share .btn-primary:last-child {
+    background: linear-gradient(135deg, #0077B5 0%, #005a8d 100%);
+}
+
+.social-share .btn-primary:last-child:hover {
+    background: linear-gradient(135deg, #005a8d 0%, #003d65 100%);
+    box-shadow: 0 8px 28px rgba(0, 119, 181, 0.3);
+}

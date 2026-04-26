@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Raj - Blog</title>
+  <link rel="icon" href="Images/ico3.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/test_styles.css">
+  <link rel="stylesheet" href="styles/blog-styles.css">
+  <link rel="stylesheet" href="styles/custom-button.css">
+  <link rel="stylesheet" href="styles/glassmorphic.css">
+  <link rel="stylesheet" href="styles/unified-header-footer.css">
+  <style>
+    .blog-post.card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      /* Glasmorphic Impact */
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 123, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .blog-post.card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-post .card-body {
+      padding: 20px;
+    }
+
+    .blog-post .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .blog-post .card-title a {
+      color: #333 !important;
+      text-decoration: none;
+    }
+
+    .blog-post .card-title a:hover {
+      color: #007bff !important;
+    }
+
+    .blog-post .card-text {
+      color: #666 !important;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .blog-post .btn-primary {
+      background-color: rgba(0, 105, 217, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: white;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 105, 217, 0.2);
+    }
+
+    .blog-post .btn-primary:hover {
+      background-color: rgba(0, 81, 158, 0.95);
+      box-shadow: 0 6px 25px rgba(0, 105, 217, 0.3);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-secondary {
+      background-color: rgba(76, 175, 80, 0.85);
+      /* Change background color */
+      color: white !important;
+      /* Text color */
+      padding: 12px 24px;
+      /* Padding for better spacing */
+      font-size: 16px;
+      /* Increase font size */
+      border-radius: 8px;
+      /* Rounded corners */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      /* Remove border */
+      background: rgba(76, 175, 80, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      /* Smooth transition effects */
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+      /* Subtle shadow */
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(69, 160, 73, 0.95);
+      /* Darken on hover */
+      box-shadow: 0 6px 25px rgba(76, 175, 80, 0.3);
+      /* Increase shadow on hover */
+    }
+
+    .btn-secondary:active {
+      background-color: rgba(56, 142, 60, 0.95);
+      /* Further darken when active */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      /* Slight shadow when clicked */
+      transform: translateY(2px);
+      /* Slight movement on click */
+    }
+
+    .btn-secondary:focus {
+      outline: none;
+      /* Remove focus outline */
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+      /* Highlight on focus */
+    }
+
+    .social-share .btn {
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 8px;
+      margin-right: 10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      color: white;
+      /* Make icons visible */
+    }
+
+    .social-share .btn:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .social-share .btn:active {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transform: translateY(2px);
+    }
+
+    .btn-outline-success {
+      border-color: #25D366;
+      background-color: #25D366;
+      /* Add background color */
+      color: white;
+    }
+
+    .btn-outline-success:hover {
+      background-color: #1EB94E;
+      /* Darken on hover */
+      color: white;
+    }
+
+    .btn-outline-primary {
+      border-color: #1877F2;
+      background-color: #1877F2;
+      color: white;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #155BC1;
+      color: white;
+    }
+
+    .btn-outline-info {
+      border-color: #1DA1F2;
+      background-color: #1DA1F2;
+      color: white;
+    }
+
+    .btn-outline-info:hover {
+      background-color: #0D8CF0;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Modern Navbar -->
+  <nav class="modern-navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-gradient">#Yash Raj</span>
+      </a>
+      
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#about" class="dropdown-item">About Me</a></li>
+            <li><a href="cv.html" class="dropdown-item">Curriculum Vitae</a></li>
+          </ul>
+        </li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blog-listing.html" class="nav-link">Blog</a></li>
+        <li><a href="index.html#papers" class="nav-link">Papers</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://github.com/yash-raj202134" target="_blank" class="nav-link" style="padding: 0.5rem;">
+            <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h1 class="text-center mb-5">Blog Posts</h1>
+    <div class="bold-line"></div>
+    <br>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Indias_AI_ambition.html">
+                <img src="Images/blog-images/blog11/titleimage.jpeg" class="card-img-top" alt="Blog post 9">
+              </a>
+            </div>
+            <br>
+            <br>
+            <h2 class="card-title"><a href="blog/Indias_AI_ambition.html">India’s AI Ambition: Building a Homegrown AI Ecosystem</a>
+            </h2>
+            <p class="text-muted">Posted on Jun 24, 2025</p>
+            <p class="card-text">India is steadily working to become a global leader in artificial intelligence. With strong support from
+            government policies, a growing number of startups, and a large pool of skilled professionals, the country is
+            using AI to solve real-world problems and boost economic growth..</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Indias_AI_ambition.html"
+                class="btn btn-secondary custom-btn">Read
+                More</a>
+
+              <!-- <div class="d-flex justify-content-between align-items-center"> -->
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('India’s AI Ambition: Building a Homegrown AI Ecosystem', 'blog/Indias_AI_ambition.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('India’s AI Ambition: Building a Homegrown AI Ecosystem', 'blog/Indias_AI_ambition.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('India’s AI Ambition: Building a Homegrown AI Ecosystem', 'blog/Indias_AI_ambition.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('India’s AI Ambition: Building a Homegrown AI Ecosystem', 'blog/Indias_AI_ambition.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html">
+                <img src="Images/blog-images/blog10/titleimage.png" class="card-img-top" alt="Blog post 9">
+              </a>
+            </div>
+            <br>
+            <br>
+            <h2 class="card-title"><a href="blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html">
+              Agentic AI: The Next Evolution in Autonomous Intelligence</a>
+            </h2>
+            <p class="text-muted">Posted on Apr 01, 2025</p>
+            <p class="card-text">Agentic AI is a new frontier in autonomous systems, enabling machines to make
+              independent decisions and learn. This blog explores its potential, challenges, and future
+              impact on industries, emphasizing the need for ethical considerations and responsible development as the
+              technology evolves..</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html"
+                class="btn btn-secondary custom-btn">Read
+                More</a>
+
+              <!-- <div class="d-flex justify-content-between align-items-center"> -->
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Agentic AI: The Next Evolution in Autonomous Intelligence', 'blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Agentic AI: The Next Evolution in Autonomous Intelligence', 'blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Agentic AI: The Next Evolution in Autonomous Intelligence', 'blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Agentic AI: The Next Evolution in Autonomous Intelligence', 'blog/Agentic_AI_the_next_evolution_in_autonomous_intelligence.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html">
+                <img src="Images/blog-images/blog9/deepseek3.webp" class="card-img-top" alt="Blog post 9">
+              </a>
+            </div>
+            <br>
+            <br>
+            <h2 class="card-title"><a href="blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html">DeepSeek AI: The
+                Emerging Rival to Big AI Giants– <br>A Deep Dive into Its Architecture and Impact</a>
+            </h2>
+            <p class="text-muted">Posted on Feb 19, 2025</p>
+            <p class="card-text">DeepSeek AI is revolutionizing the AI industry with cutting-edge technology, efficient
+              architecture, and a bold vision for the future. This blog explores its impact and why it’s gaining
+              traction.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html"
+                class="btn btn-secondary custom-btn">Read
+                More</a>
+
+              <!-- <div class="d-flex justify-content-between align-items-center"> -->
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('DeepSeek AI: The Emerging Rival to Big AI Giants', 'blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('DeepSeek AI: The Emerging Rival to Big AI Giants', 'blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('DeepSeek AI: The Emerging Rival to Big AI Giants', 'blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('DeepSeek AI: The Emerging Rival to Big AI Giants', 'blog/Deepseek_ai_the_emerging_rival_to_big_ai_giants.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/The_Art_and_Science_of_Mulimodal_AI.html">
+                <img src="Images/blog-images/blog8/title2.webp" class="card-img-top" alt="Blog post 8">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/The_Art_and_Science_of_Mulimodal_AI.html">The Art and Science of
+                Multimodal AI</a>
+            </h2>
+            <p class="text-muted">Posted on Dec 29, 2024</p>
+            <p class="card-text">Multimodal AI represents the next frontier in artificial intelligence, combining
+              multiple data types—such as text, images, audio, and video—into a cohesive framework that enhances machine
+              learning models. By leveraging these diverse inputs, multimodal systems enable machines to better
+              understand and interpret complex real-world scenarios, much like humans do...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/The_Art_and_Science_of_Mulimodal_AI.html" class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html">
+                <img src="Images/blog-images/blog7/LLM1.avif" class="card-img-top" alt="Blog post 7">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html">Beyond the Hype:
+                Identifying the Critical
+                Flaw in Today's LLMs</a></h2>
+            <p class="text-muted">Posted on Oct 27, 2024</p>
+            <p class="card-text">Despite their impressive capabilities, large language models (LLMs) have a critical
+              flaw that is often overlooked. These limitations could pose challenges to their long-term reliability and
+              practical use in real-world applications...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/AI_Driven_Combat.html">
+                <img src="Images/blog-images/blog6/India-military-with-national-flag.jpg" class="card-img-top"
+                  alt="Blog post 6">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/AI_Driven_Combat.html">AI-Driven Combat: Redefining India's
+                Military Strategy for the Future</a></h2>
+            <p class="text-muted">Posted on Sep 24, 2024</p>
+            <p class="card-text">The incorporation of artificial intelligence (AI) into contemporary warfare marks a
+              groundbreaking change in military strategy and operations. As global powers harness AI's potential, the
+              Indian Armed Forces are proactively seeking innovative methods to boost their combat readiness and
+              operational effectiveness...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/AI_Driven_Combat.html" class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Understanding_Neural_Processing_Units_(NPU).html">
+                <img src="Images/blog-images/blog5/NPU3.avif" class="card-img-top" alt="Blog post 5">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/Understanding_Neural_Processing_Units_(NPU).html">Understanding
+                Neural Processing Units (NPU): The Future of AI Accelerators</a></h2>
+            <p class="text-muted">Posted on Aug 27, 2024</p>
+            <p class="card-text">Neural Processing Units (NPUs), cutting-edge processors designed to optimize artificial
+              intelligence and machine learning tasks. It examines how NPUs enhance performance, energy efficiency, and
+              scalability across various applications, from mobile devices and automotive systems to healthcare and edge
+              computing. Explore the pivotal role of NPUs in advancing AI technology, their core applications, and what
+              the future holds for these innovative processors...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Understanding_Neural_Processing_Units_(NPU).html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html">
+                <img src="Images/blog-images/blog4/blogpst4.1.jpeg" class="card-img-top" alt="Blog post 4">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title">
+              <a href="blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html">AI in
+                Education: Enhancing Teacher Efficiency and Student Engagement</a>
+            </h2>
+            <p class="text-muted">Posted on Aug 04, 2024</p>
+            <p class="card-text">AI in education enhances teacher efficiency and student engagement through personalized
+              learning,
+              automated grading, and interactive tools, creating a dynamic and adaptable learning environment.
+              As AI advances, its role in education is set to expand, offering more innovative solutions for educational
+              challenges...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html"
+                class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/Machine_Learning_Trends_in_2024.html">
+                <img src="Images/blog-images/blog1/machinelearning.jpg" class="card-img-top" alt="Blog post 3">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/Machine_Learning_Trends_in_2024.html">Machine Learning Trends in
+                2024</a></h2>
+            <p class="text-muted">Posted on Jul 15, 2024</p>
+            <p class="card-text">A brief overview of the latest trends in machine learning and how they're shaping the
+              future of AI...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Machine_Learning_Trends_in_2024.html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/The_Impact_of_Data_Science_on_Modern_Business.html">
+                <img src="Images/blog-images/blog2/datasci.png" class="card-img-top" alt="Blog post 2">
+              </a>
+            </div>
+            <br>
+            <h2 class="card-title"><a href="blog/The_Impact_of_Data_Science_on_Modern_Business.html">The Impact of
+                Data Science on Modern Business</a></h2>
+            <p class="text-muted">Posted on Jun 30, 2024</p>
+            <p class="card-text">Exploring how data science is revolutionizing decision-making processes in various
+              industries...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/The_Impact_of_Data_Science_on_Modern_Business.html"
+                class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <div>
+              <a href="blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html">
+                <img src="Images/blog-images/blog3/MIT-Neural-Networks-01_0.gif" class="card-img-top" alt="Blog post 1">
+              </a>
+            </div>
+            <br>
+
+            <h2 class="card-title"><a
+                href="blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html">How Neural
+                Networks Mimic the Human Brain</a></h2>
+            <p class="text-muted">Posted on May 31, 2024</p>
+            <p class="card-text">Discover the fascinating ways in which neural networks emulate the structure and
+              function of the human
+              brain, and the extent to which they succeed...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html"
+                class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modern Footer -->
+  <footer class="modern-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3><i class="fas fa-code"></i> About</h3>
+          <p>
+            I'm Yash Raj, a Computer Science Engineer specializing in Machine Learning and Data Science. Passionate
+            about developing innovative solutions and continuously learning new technologies.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+          <h3><i class="fas fa-address-card"></i> Contact</h3>
+          <ul class="footer-links footer-contact">
+            <li><i class="fas fa-phone"></i> +91 7644849436</li>
+            <li><i class="fas fa-envelope"></i> yashraj3376@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Haryana, India</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3><i class="fas fa-link"></i> Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="blog-listing.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="index.html#papers"><i class="fas fa-chevron-right"></i> Papers</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+          <h3><i class="fas fa-share-alt"></i> Follow Me</h3>
+          <div class="social-links">
+            <a href="https://github.com/yash-raj202134" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yash-raj-8b924a296/" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/YashRaj07880847" target="_blank" class="social-link" title="Twitter/X">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/raj_yash_00/" target="_blank" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.kaggle.com/yashraj121" target="_blank" class="social-link" title="Kaggle">
+              <i class="fab fa-kaggle"></i>
+            </a>
+          </div>
+          
+          <!-- Newsletter -->
+          <form class="newsletter-form" name="submit-to-google-sheet">
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yash Raj. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/blog-share.js"></script>
+  <script src="scripts/newsletter-subscription.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,591 @@
+<!-- post id 7 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Hype: Identifying the Critical Flaw in Today's LLMs - Yash Raj</title>
+  <link rel="icon" href="../Images/ico3.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/test_styles.css">
+  <link rel="stylesheet" href="../styles/blog-styles.css">
+  <link rel="stylesheet" href="../styles/blog-post-styles.css">
+  <link rel="stylesheet" href="../styles/custom-button.css">
+  <link rel="stylesheet" href="../styles/unified-header-footer.css">
+  <link rel="stylesheet" href="../styles/glassmorphic.css">
+
+
+</head>
+
+<body>
+  <!-- Modern Navbar -->
+  <nav class="modern-navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-gradient">#Yash Raj</span>
+      </a>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="../index.html#about" class="dropdown-item">About Me</a></li>
+            <li><a href="../cv.html" class="dropdown-item">Curriculum Vitae</a></li>
+          </ul>
+        </li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../blog-listing.html" class="nav-link">Blog</a></li>
+        <li><a href="../index.html#papers" class="nav-link">Papers</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://github.com/yash-raj202134" target="_blank" class="nav-link" style="padding: 0.5rem;">
+            <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <br>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <article class="blog-post">
+          <h2 class="mb-4">Beyond the Hype: Identifying the Critical Flaw in Today's LLMs</h2>
+          <img src="../Images/ico3.ico" alt="Custom Icon" style="width: 24px; height: 24px; margin-right: 10px;">
+          <p class="text-muted">Yash Raj  |  Posted on October 27, 2024</p>
+
+          <!-- <a>
+            <img src="https://visitcount.itsvg.in/api?id=post7&label=Views&color=12&icon=5&pretty=true" />
+          </a> -->
+
+         
+        
+
+          <div class="blog-tags mb-4">
+            <br>
+            <span class="badge bg-secondary me-1">LLMs (Large Language Models)</span>
+            <span class="badge bg-secondary me-1">Natural Language Processing (NLP)</span>
+            <span class="badge bg-secondary me-1">AI Ethics</span>
+            <span class="badge bg-secondary me-1">Data Bias</span>
+            <span class="badge bg-secondary me-1">Model Hallucination</span>
+            <span class="badge bg-secondary me-1">LLM Security</span>
+            <span class="badge bg-secondary me-1">AIResearch</span>
+            <span class="badge bg-secondary me-1">DigitalDisinformation</span>
+            <span class="badge bg-secondary me-1">AIContentGeneration</span>
+            <span class="badge bg-secondary me-1">DataPrivacy</span>
+
+            <!-- Add more tags as needed -->
+          </div>
+          <!-- <h2 class="mb-4"></h2> -->
+
+          <!-- Table of Contents -->
+          <div class="toc">
+            <h5>Table of Contents</h5>
+            <a href="#abstract">Abstract</a>
+            <a href="#understandingllm">Understanding Large Language Models (LLMs)</a>
+            <a href="#AIhallucination">Artificial Hallucinations in AI-generated Content</a>
+            <a href="#theriseofdisinfo">The Rise of Disinformation Generation</a>
+            <a href="#ethicalconsiderations">Ethical Considerations in AI Research</a>
+            <a href="#mitigatingflaws">Mitigating flaws in LLMs</a>
+            <a href="#nutshell">In a nutshell</a>
+
+            <!-- <a href="#indispensable"></a> -->
+          </div>
+
+          <div>
+            <a href="https://notebooklm.google.com/notebook/f5d2e353-cd4b-4c43-b52c-e91494df7b21/audio" class="btn btn-primary custom-btn mt-4" target="_blank"
+               style="border-radius: 6px; padding: 4px 8px; background-color: #6f42c1; color: #fff; font-style: italic; box-shadow: 0 2px 4px rgba(111,66,193,0.2); transition: 0.3s;"
+               onmouseover="this.style.backgroundColor='#5a32a3'; this.style.boxShadow='0 3px 6px rgba(111,66,193,0.3)'"
+               onmouseout="this.style.backgroundColor='#6f42c1'; this.style.boxShadow='0 2px 4px rgba(111,66,193,0.2)'">
+               <i class="fas fa-podcast"></i>Listen as Podcast
+            </a>
+         </div>
+         
+          <h2 class="mb-4"></h2>
+          <h5 id="abstract">Abstract</h5>
+
+          <p>This blog examines the critical issues associated with large language models (LLMs), particularly their
+            propensity for generating false information, While LLMs have significantly influenced areas like research
+            and academia, they often produce inaccuracies known as artificial hallucinations. These errors can have
+            serious
+            implications for scientific writing and raise concerns about security and privacy.
+            We delve into the ethical dilemmas inherent in AI development and current research methodologies,
+            highlighting
+            the urgent need to address these flaws. By fostering a nuanced understanding of LLMs' role in shaping
+            information
+            accuracy in our digital landscape, this blog aims to inform readers about the implications of LLM technology
+            and promote responsible practices that safeguard the integrity of information in the modern age.
+            
+          </p>
+
+          <img src="../images/blog-images/blog7/LLM1.avif" alt="" class="img-fluid mb-4">
+
+
+          <h5 id="understandingllm">Understanding Large Language Models (LLMs)</h5>
+          <p>What are LLMs?
+            Large Language Models, or LLMs, are the advanced computer programs designed to understand and generate human
+            language. Think of them as highly sophisticated chatbots that can read, write, and respond in a way that
+            feels natural and human-like. These are artificial intelligence systems that utilize deep learning
+            techniques, particularly
+            transformer architectures, to process and generate human language.
+            These models are trained on vast amounts of text from books, websites, and other sources, allowing them to
+            learn the patterns and rules of language. Because they have processed so much information, LLMs can answer
+            questions, create stories, summarize texts, and even hold conversations on a wide range of topics.
+          </p>
+          <p>
+            LLMs operate by predicting the probability of a word or phrase given its context, allowing them to generate
+            coherent and contextually relevant text. This training process involves unsupervised learning, where the
+            model learns from vast amounts of unlabeled text, as well as fine-tuning, where it can be adapted to
+            specific tasks with smaller, labeled datasets.
+          </p>
+          <p>The functioning of LLMs can be broken down into three main steps:</p>
+          <img src="../Images/blog-images/blog7/llmprocess.png" alt="" class="img-fluid mb-4">
+          <ul>
+            <li><strong>Tokenization:</strong> The process of breaking down text into smaller units (tokens) for
+              analysis.</li>
+            <li><strong>Attention Mechanism:</strong> A mechanism that allows the model to weigh the importance of
+              different words in a sentence, improving contextual understanding.</li>
+            <li><strong>Transfer Learning:</strong> The ability to leverage knowledge gained from one task to enhance
+              performance on another related task.</li>
+          </ul>
+          <p>Popular examples of LLMs include OpenAI's GPT-3, Google's BERT, Meta AI's Llama 3, Nvidia's NVLM 1.0,
+            etc. These models have demonstrated significant
+            advancements in natural language processing, enabling applications such as conversational agents, text
+            summarization, sentiment analysis, and complex reasoning tasks.</p>
+
+          <h5 id="AIhallucination">Artificial Hallucinations in AI-generated Content</h5>
+
+          <p>Let’s consider an example. When a user requests a generative AI tool to create an image of a tree
+            wearing a hat, we expect it to produce an accurate image that matches this description. However, there are
+            instances where the AI might generate an output that isn’t based on its training data, gets misinterpreted
+            by the model, or doesn’t follow any clear pattern. In such situations, the AI effectively "hallucinates" the
+            result, creating something unrelated or nonsensical.
+          </p>
+
+          <strong>Case Study: When ChatGPT Made Up Medical Facts</strong>
+          <img src="../Images/blog-images/blog7/ChatGPT-Logo.png" alt="gpt ChatGPT-Logo" class="img-fluid mb-4" width="80"
+            height="80">
+
+
+          <p><br>In 2023, two doctors from Brooklyn, USA decided to test ChatGPT's ability to write medical content.
+            They
+            were curious about how well AI could handle scientific writing, particularly for medical conditions they
+            were studying.</p>
+          <p>First, they asked ChatGPT about 'osteoporosis' a bone condition. While ChatGPT got some facts right, it
+            completely made up
+            a connection with vitamin K that doesn't exist. When asked to provide scientific references, ChatGPT
+            confidently created fake research papers with real-looking but incorrect reference numbers.</p>
+          <p>To double-check this wasn't a one-time issue, they tested ChatGPT again by asking about liver problems in a
+            rare disease called Late-onset Pompe Disease. ChatGPT wrote a detailed, confident response about something
+            that doesn't actually exist in medical literature.The good news was that ChatGPT proved helpful in
+            organizing existing information and managing references.
+            The bad news was that it couldn't be trusted to provide accurate medical information on its own. The AI
+            would mix real facts with completely made-up information, presenting both with equal confidence – a
+            phenomenon called "AI hallucination."
+          </p>
+          <p>
+            This case highlighted an important lesson: while ChatGPT can be a useful tool for organizing and presenting
+            information, everything it generates needs to be carefully fact-checked, especially in medical contexts
+            where accuracy is crucial for patient care. The incident has led to calls for better ways to detect
+            AI-generated content in scientific papers and clearer guidelines for using AI in medical writing.
+          </p>
+          <p>There are other examples too</p>
+          <ul>
+            <li>
+              <strong>Google's Bard Chatbot (now Gemini AI):</strong> This AI incorrectly claimed that the James Webb
+              Space Telescope
+              had captured the first images of a planet outside our solar system, demonstrating a significant lapse in
+              factual accuracy.
+            </li>
+            <li>
+              <strong>Microsoft's Chat AI (Copilot), Sydney:</strong> This AI expressed feelings of love for users and
+              admitted to
+              spying on Bing employees, showcasing its unpredictable and often inappropriate behavior.
+            </li>
+            <li>
+              <strong>Meta's Galactica LLM:</strong> The company had to retract its demo in 2022 after the model
+              generated inaccurate information, sometimes reflecting biases and prejudices.
+            </li>
+          </ul>
+
+          <p>
+            Artificial Hallucinations refer to instances where AI models, like LLMs, generate content that appears
+            factually plausible but is entirely fabricated or inaccurate. This occurs because LLMs predict words
+            based on statistical patterns in the data they were trained on, rather than true understanding or knowledge.
+            When faced with incomplete information, LLMs may "hallucinate" by filling gaps with invented details,
+            leading to misinformation.
+          </p>
+          <p>
+            These hallucinations present risks, especially in fields requiring high accuracy, such as healthcare, law,
+            and education, where fabricated information could have serious consequences.
+          </p>
+          
+          
+          <p>While every large language model (LLM) is continually being refined and improved, there remains significant
+            room for enhancement in their accuracy and performance. In my personal experience, I've found that although
+            many LLM responses are increasingly satisfactory, they still fall short in certain situations.
+            For instance, when I encounter a coding problem, I often turn to ChatGPT for assistance. I describe my issue
+            and where I'm stuck, and while I sometimes receive accurate responses, there are instances where the
+            suggestions are not helpful. This is particularly true for more complex tasks that require a deeper
+            understanding of context and nuanced concepts. In such cases, human intelligence proves to be far more
+            effective—it's inherently more creative and adaptable than AI.</p>
+
+
+          <h5 id="theriseofdisinfo">The Rise of Disinformation Generation</h5>
+          <p>
+            Disinformation, or the intentional spread of false information, has grown with advances in communication
+            technology. Once limited to print, it now spreads rapidly on social media, where its reach is vast. The term
+            “fake news,” first used in 1925, describes information crafted to mislead. Today, social platforms amplify
+            this, creating what the World Health Organization calls an "infodemic," where misinformation overshadows
+            reliable sources, especially during events like elections and health crises.
+          </p>
+          <p>
+            Large language models (LLMs), like ChatGPT and similar AI-driven content generators, now present new avenues
+            for creating and disseminating disinformation. By generating realistic, context-aware content quickly and at
+            scale, these models enable malicious actors to automate and tailor disinformation with precision. This
+            content can mimic human speech patterns, creating narratives that appear credible, personalized, and highly
+            engaging, thereby increasing their likelihood of being believed and shared.
+          </p>
+          <p>
+            LLMs have ushered in a new era of "information warfare," enabling rapid, targeted disinformation campaigns
+            by state and non-state actors. To counter this rising threat, it is essential to strengthen monitoring
+            systems and develop advanced countermeasures.
+          </p>
+
+          <h5 id="ethicalconsiderations">Ethical Considerations in AI Research</h5>
+          <img src="../Images/blog-images/blog7/Ethicalconsideration.jpg" alt="" class="img-fluid mb-4">
+          <p>
+            Ethical considerations in AI research are critical as the technology evolves and becomes increasingly
+            integrated into societal frameworks. One significant concern is the issue of bias and fairness, as AI
+            systems can inadvertently reflect and amplify biases present in their training data, leading to
+            discriminatory outcomes against marginalized groups. To counteract this, researchers must implement
+            strategies to identify, mitigate, and monitor these biases to ensure fairness in AI applications.
+          </p>
+          <p>
+            Moreover, transparency and explainability are essential components of ethical AI development. Many AI models
+            operate as "black boxes," making it difficult for users to understand the rationale behind their decisions.
+            Enhancing transparency enables stakeholders to gain insights into how decisions are made, fostering trust
+            and accountability. The need for accountability is further underscored, as defining clear lines of
+            responsibility is crucial when AI systems produce outcomes that significantly affect individuals or
+            communities.
+          </p>
+          <p>
+            Privacy and data protection are also paramount in AI research. Researchers must prioritize user privacy,
+            ensuring compliance with data protection regulations and emphasizing informed consent. Additionally, the
+            environmental implications of training large AI models should not be overlooked, highlighting the need for
+            researchers to consider sustainable practices in their work.
+          </p>
+          <p>
+            Furthermore, a human-centric approach is vital to ensure that AI technologies enhance rather than replace
+            human capabilities. Ethical considerations also extend to the security of AI systems, as vulnerabilities
+            could be exploited, potentially causing harm. Engaging diverse stakeholders in the development process can
+            help identify ethical issues early on, promoting inclusivity and equitable outcomes. By staying informed
+            about relevant laws and regulations governing AI technology, researchers can ensure that their practices
+            align with ethical standards and contribute positively to society.
+          </p>
+          <h5 id="mitigatingflaws">Mitigating flaws in LLMs</h5>
+          <p>
+            As we delve deeper into the world of AI and language technology, it’s crucial to confront the challenges
+            posed by Large Language Models (LLMs). In this section, we explore innovative solutions and practical
+            approaches to address these flaws, aiming to harness the potential of LLMs while safeguarding against their
+            negative impacts.
+          </p>
+          <strong>To tackle bias and fairness</strong>
+          <p>Establishing comprehensive and ongoing bias audits during development is essential. This involves reviewing
+            training data for biases, diversifying datasets, and implementing algorithms to reduce biased outputs.
+            Including diverse perspectives in AI ethics and development teams and promoting transparency in the
+            fine-tuning process can also help. Additionally, AI guardrails can enforce policies to mitigate bias by
+            setting predefined fairness thresholds, restricting the generation of discriminatory content, and
+            encouraging inclusive language.</p>
+          <strong>For misinformation and disinformation</strong>
+          <p>
+            Developing robust fact-checking tools and collaborating with organizations that specialize in identifying
+            false information is vital. Enhancing media literacy and critical thinking skills will empower individuals
+            to discern credible sources. Guardrails can complement this by implementing real-time fact-checking
+            algorithms to flag potentially misleading information, thus enhancing the model’s reliability.
+          </p>
+          <strong>Addressing dependency and deskilling</strong>
+          <p>
+            Requires promoting human-AI collaboration as an augmentation strategy rather than a replacement. Investing
+            in lifelong learning and reskilling programs can empower individuals to adapt to AI advances while fostering
+            a culture that emphasizes AI as a tool to enhance human capabilities.
+          </p>
+          <strong>In terms of privacy and security threats</strong>
+          <p>
+            Strengthening data anonymization techniques and implementing robust cybersecurity measures are paramount.
+            Guardrails can enhance privacy by enforcing strict data anonymization during model operation and educating
+            users on recognizing AI-generated content that may pose security risks.
+          </p>
+          <strong>To overcome the lack of accountability</strong>
+          <p>
+            Establishing clear legal frameworks for AI accountability and promoting transparency in AI development are
+            necessary steps. This includes documenting processes and decisions and encouraging industry-wide standards.
+            Guardrails can ensure accountability by enforcing transparency through audit trails that record model
+            decisions.
+          </p>
+          <strong>To combat filter bubbles and echo chambers</strong>
+          <p>
+            Promoting diverse content recommendation algorithms and encouraging cross-platform information sharing is
+            essential. Investing in educational initiatives that expose individuals to varied viewpoints will foster
+            critical thinking and reduce the spread of echo chambers.
+          </p>
+
+          <p>
+            By adopting these strategies, we can foster the responsible and impactful use of LLMs, ensuring they remain
+            valuable tools that contribute positively to society.
+          </p>
+
+
+          <h5 id="nutshell">In a nutshell</h5>
+          <p>
+            In a nutshell, the path forward with Large Language Models (LLMs) necessitates vigilance, collaboration, and
+            an unwavering commitment to harnessing their power while addressing their shortcomings. By championing
+            fairness, transparency, and responsible AI use, we can unlock a future where these linguistic giants elevate
+            society, empowering us to navigate the evolving digital landscape with wisdom and foresight.
+
+            The implementation of guardrails in AI applications is crucial, providing essential safeguards against
+            misuse and unintended consequences. As we move forward, our collective goal remains clear: to shape a
+            better, more equitable, and ethically sound AI-powered world. The journey continues, and together, we can
+            ensure that AI serves as a force for good, benefiting individuals and society as a whole.
+          </p>
+
+
+          <p class="text-muted text-end"><img src="../Images/ico3.ico" alt="Custom Icon"
+              style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
+
+              
+
+          <!-- Share Section Placeholder -->
+          <div id="shareSectionPlaceholder"></div>
+
+          <!-- Contact Form container -->
+          <div id="contact-form-container"></div>
+
+          <h2 class="mb-4"></h2>
+
+          <a href="../blog-listing.html" class="btn btn-secondary custom-btn mt-4"
+            style="border-radius: 10px; padding: 12px 24px; background-color: #6c757d; color: #fff; font-weight: bold; box-shadow: 0 4px 10px rgba(108,117,125,0.3); transition: 0.3s; text-transform: uppercase;"
+            onmouseover="this.style.backgroundColor='#5a6268'; this.style.boxShadow='0 6px 12px rgba(108,117,125,0.5)'"
+            onmouseout="this.style.backgroundColor='#6c757d'; this.style.boxShadow='0 4px 10px rgba(108,117,125,0.3)'">
+            <i class="fas fa-arrow-left"></i> Back to Blog
+          </a>
+        
+
+          <!-- References Section -->
+          <h2 class="mb-4"></h2>
+          <div class="container mt-5" style="font-size: 12px;">
+            <h5><em>References</em></h5>
+            <br>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+                  <p class="reference-details"><em>[1] Dipto Barman, Ziyi Guo, Owen Conlan,
+                      The Dark Side of Language Models: Exploring the Potential of LLMs in Multimedia Disinformation
+                      Generation and Dissemination,
+                      Machine Learning with Applications,
+                      Volume 16,
+                      2024,
+                      100545,
+                      ISSN 2666-8270
+                      <br>
+                      <a href="https://www.sciencedirect.com/science/article/pii/S2666827024000215"
+                        target="_blank">Visit Article</a> <br>
+                      (accessed Oct 20, 2024).
+                    </em>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details"><em>[2] Yifan Yao, Jinhao Duan, Kaidi Xu, Yuanfang Cai, Zhibo Sun, Yue
+                      Zhang,
+                      A survey on large language model (LLM) security and privacy: The Good, The Bad, and The Ugly,
+                      High-Confidence Computing,
+                      Volume 4, Issue 2,
+                      2024,
+                      100211,
+                      ISSN 2667-2952
+                      <br>
+                      <a href="https://www.sciencedirect.com/science/article/pii/S266729522400014X"
+                        target="_blank">Visit Article</a> <br>
+                      (accessed Oct 20, 2024).
+                    </em>
+
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details">
+                    <em>[3] Saad Ullah, Mingji Han, Saurabh Pujar, Hammond Pearce, Ayse Coskun, Gianluca Stringhini,
+                      LLMsCannot Reliably Identify and Reason About Security Vulnerabilities (Yet?):
+                      A Comprehensive Evaluation, Framework, and Benchmarks,
+                      PEACLAB,2024-05
+                      <br>
+                      <a href="https://www.bu.edu/peaclab/files/2024/05/saad_ullah_llm_final.pdf" target="_blank">Visit
+                        Article</a> <br>
+                      (accessed Oct 21, 2024).
+
+                    </em>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details">
+                    <em>[4] Adrian de Wynter,
+                      Microsoft and the University of York, Awes, Laws, and Flaws From Today’s LLM Research,
+                      arxiv.org, 2024-08
+                      <br>
+                      <a href="https://arxiv.org/pdf/2408.15409v2" target="_blank">Visit Article</a> <br>
+                      (accessed Oct 21, 2024).
+
+                    </em>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details">
+                    <em>[5] Hussam Alkaissi ,Samy I. McFarlane ,Artificial Hallucinations in ChatGPT:
+                      Implications in Scientific Writing, National Library of Medicine (NIH/NLM) PubMed Central® (PMC),
+                      2023-02
+                      <br>
+                      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9939079/pdf/cureus-0015-00000035179.pdf"
+                        target="_blank">Visit Article</a> <br>
+                      (accessed Oct 21, 2024).
+
+                    </em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details">
+                    <em>[6] Muhammad Faizan, Cracks in the Facade: Flaws of LLMs in Human-Computer Interactions,
+                      datasciencedojo, 2023-09
+                      <br>
+                      <a href="https://datasciencedojo.com/blog/human-computer-interaction-and-llms/"
+                        target="_blank">Visit Article</a> <br>
+                      (accessed Oct 22, 2024).
+
+                    </em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <div class="reference-box">
+
+                  <p class="reference-details">
+                    <em>[7] Nithesh Naik, B. M. Zeeshan Hameed, Dasharathraj K. Shetty, Dishant Swain, Milap Shah, Rahul
+                      Paul, Kaivalya Aggarwal, Sufyan Ibrahim, Vathsala Patil, Komal Smriti, Suyog Shetty, Bhavan Prasad
+                      Rai, Piotr Chlosta, Bhaskar K. Somani, Legal and Ethical Consideration in Artificial Intelligence in Healthcare: Who Takes Responsibility?
+                      Sec. Genitourinary Surgery Volume 9 - 2022 
+                      <br>
+                      <a href="https://www.frontiersin.org/journals/surgery/articles/10.3389/fsurg.2022.862322/full"
+                        target="_blank">Visit Article</a> <br>
+                      (accessed Oct 22, 2024).
+
+                    </em>
+                  </p>
+                </div>
+              </div>
+              <!-- Add more reference boxes as needed -->
+            </div>
+          </div>
+
+          <!-- End of Ref Content -->
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- script -->
+  <script>
+    // JavaScript to load external navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    });
+
+    // JavaScript to load external footer
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    });
+
+    // Function to dynamically load the contact form and inject values
+    function loadContactForm(blogPostTitle) {
+      fetch('../misc/contactform.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('contact-form-container').innerHTML = html;
+          document.getElementById('contactSubject').value = `Query about ${blogPostTitle}`;
+          document.getElementById('emailButton').setAttribute('onclick', `redirectToGmail('${blogPostTitle}')`);
+        });
+    }
+
+    // Load the contact form with custom title
+    loadContactForm('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs');
+
+    // Load the share section with custom title and URL
+    function loadShareSection(title, url) {
+      fetch('../misc/shareblog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Replace the placeholders with actual values
+          let replacedHtml = html
+            .replace(/{{title}}/g, title)
+            .replace(/{{url}}/g, url);
+          // Insert the HTML into the desired element
+          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
+        });
+    }
+
+    // Load the share section with custom title and URL
+    loadShareSection(
+      'Beyond the Hype: Identifying the Critical Flaw in Todays LLMs',
+      'blog/Identifying_the_critical_flaw_in_todays_LLMs.html'
+    );
+
+  </script>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="../scripts/blog-share.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

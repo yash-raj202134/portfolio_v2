@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Raj - Projects</title>
+  <link rel="icon" href="Images/ico3.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/test_styles.css">
+  <link rel="stylesheet" href="styles/custom-button.css">
+  <link rel="stylesheet" href="styles/glassmorphic.css">
+  <link rel="stylesheet" href="styles/unified-header-footer.css">
+
+  <style>
+    /* Project Cards Transition Effects */
+    #project-grid .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      /* Glasmorphic Enhancement */
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    #project-grid .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    #project-grid .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    #project-grid .card-body {
+      padding: 20px;
+    }
+
+    #project-grid .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #project-grid .card-text {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    #project-grid .btn-primary {
+      background-color: rgba(0, 105, 217, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: white;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 105, 217, 0.2);
+    }
+
+    #project-grid .btn-primary:hover {
+      background-color: rgba(0, 81, 158, 0.95);
+      box-shadow: 0 6px 25px rgba(0, 105, 217, 0.3);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    #project-grid .btn-secondary {
+      background-color: rgba(108, 117, 125, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: white;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(108, 117, 125, 0.15);
+    }
+
+    #project-grid .btn-secondary:hover {
+      background-color: rgba(90, 98, 104, 0.95);
+      box-shadow: 0 6px 25px rgba(108, 117, 125, 0.25);
+    }
+
+    .bold-line {
+      border-top: 4px solid #007bff;
+      /* Thick and bold line */
+      width: 50px;
+      /* Short line */
+      margin: 10px auto 0;
+      /* Center the line and add some spacing */
+    }
+
+    .subscription {
+      color: #61b752;
+      margin-top: 10px;
+      display: block;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Modern Navbar -->
+  <nav class="modern-navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-gradient">#Yash Raj</span>
+      </a>
+      
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#about" class="dropdown-item">About Me</a></li>
+            <li><a href="cv.html" class="dropdown-item">Curriculum Vitae</a></li>
+          </ul>
+        </li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blog-listing.html" class="nav-link">Blog</a></li>
+        <li><a href="index.html#papers" class="nav-link">Papers</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://github.com/yash-raj202134" target="_blank" class="nav-link" style="padding: 0.5rem;">
+            <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="section container mt-5">
+    <br>
+    <h1 class="text-center ">My Projects</h1>
+    <br>
+    <div class="bold-line"></div>
+    <br>
+
+    <!-- Category filter buttons -->
+    <div class="text-center mb-4">
+      <button class="btn btn-primary custom-btn filter-btn active glass-enhanced" data-filter="all">All</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="machine-learning">Machine Learning</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="data-analysis">Data Analysis</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="deep-learning">Deep Learning</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="genai">Gen AI</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="cv">Computer Vision</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="web-development">Web Development</button>
+      <button class="btn btn-primary custom-btn filter-btn glass-enhanced" data-filter="research">Research</button>
+
+    </div>
+    <br>
+
+    <!-- Project grids here -->
+    <div class="row" id="project-grid">
+
+
+
+      <!-- SeriesLens -->
+      <div class="col-md-4 mb-4 project-item" data-category="data-analysis">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/HMS-dashboard/">
+            <img src="Images/project-images/HERDashboard.png" class="card-img-top" alt="SeriesLens_img">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">HER Dashboard</h5>
+            <p class="card-text">
+              A Power BI solution for analyzing ER operations, patient demographics, referrals, and performance metrics.
+            </p>
+
+            <a href="https://github.com/yash-raj202134/HMS-dashboard" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/HMS-dashboard/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SeriesLens -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/SeriesLens/">
+            <img src="Images/project-images/serieslens.png" class="card-img-top" alt="SeriesLens_img">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">SeriesLens</h5>
+            <p class="card-text">
+              AI-Enhanced TV Series Analysis and Character Interaction
+            </p>
+
+            <a href="https://github.com/yash-raj202134/SeriesLens" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/SeriesLens/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- TalentOptimize-AI-Powered-Recruitment-Solutions -->
+      <div class="col-md-4 mb-4 project-item" data-category="data-analysis">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/TalentOptimize-AI-Powered-Recruitment-Solutions/">
+            <img src="Images/project-images/HRrec.jpg" class="card-img-top"
+              alt="TalentOptimize-AI-Powered-Recruitment-Solutions">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">TalentOptimize-AI-Powered-Recruitment-Solutions</h5>
+            <p class="card-text">
+              Leveraging Python libraries and algorithms to optimize the hiring process and revolutionize job placement
+              strategies with machine learning insights.
+            </p>
+
+            <a href="https://github.com/yash-raj202134/TalentOptimize-AI-Powered-Recruitment-Solutions"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/TalentOptimize-AI-Powered-Recruitment-Solutions/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- RecommendaFy Project -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/RecommendaFy-Project/">
+            <img src="Images/project-images/ecomrec.jpg" class="card-img-top" alt="RecommendaFy Project">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">RecommendaFy-Project</h5>
+            <p class="card-text">
+              An e-commerce recommendation system using Python Flask and machine learning to provide personalized
+              product recommendations to users.
+            </p>
+            <a href="https://github.com/yash-raj202134/RecommendaFy-Project" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/RecommendaFy-Project/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- GeoLifeCLEF-LifeCLEF-CVPR-FGVC -->
+      <div class="col-md-4 mb-4 project-item" data-category="research">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/GeoLifeCLEF-LifeCLEF-CVPR-FGVC/">
+            <img src="Images/project-images/geolifeclef.jpg" class="card-img-top" alt="GeoLifeCLEF-LifeCLEF-CVPR-FGVC">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">GeoLifeCLEF-LifeCLEF-CVPR-FGVC</h5>
+            <p class="card-text">
+              The Species Composition Prediction project aims to predict plant species in a given location and time
+              using various predictors such as satellite images, climatic time series, and other rasterized
+              environmental data.
+            </p>
+            <a href="https://github.com/yash-raj202134/GeoLifeCLEF-LifeCLEF-CVPR-FGVC"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/GeoLifeCLEF-LifeCLEF-CVPR-FGVC/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RetentiveGuard -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/RetentiveGuard/">
+            <img src="Images/project-images/retentiveguard.jpg" class="card-img-top" alt="RetentiveGuard">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">RetentiveGuard</h5>
+            <p class="card-text">
+              RetentiveGuard is a machine learning model that can accurately detect whether an essay was written by a
+              student or a Large Language Model (LLM).
+            </p>
+            <a href="https://github.com/yash-raj202134/RetentiveGuard" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/RetentiveGuard/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SmartScholar -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/SmartScholar/">
+            <img src="Images/project-images/smartscholar.jpg" class="card-img-top" alt="SmartScholar">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">SmartScholar</h5>
+            <p class="card-text">
+              A machine learning project featuring two main functionalities: a research papers recommendation system and
+              subject area prediction.
+            </p>
+            <a href="https://github.com/yash-raj202134/SmartScholar" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/SmartScholar/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Jharkhand Tourism Website -->
+      <div class="col-md-4 mb-4 project-item" data-category="web-development">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/WebDevlopment/">
+            <img src="Images/project-images/website.jpg" class="card-img-top" alt="Jharkhand">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Jharkhand Tourism Website (FE)</h5>
+            <p class="card-text">
+              A web project designed to showcase the attractions and beauty of Jharkhand, India. Users can easily
+              navigate the website to explore Jharkhand's nature, culture, and landmarks.
+            </p>
+            <a href="https://github.com/yash-raj202134/WebDevlopment" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/WebDevlopment/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FootyFlow -->
+      <div class="col-md-4 mb-4 project-item" data-category="cv">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/FootyFlow/">
+            <img src="Images/project-images/footyflow.png" class="card-img-top" alt="FootyFlow">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Football Match Tracker System with YOLO</h5>
+            <p class="card-text">
+              The primary goal of this project is to identify and monitor players, referees, and footballs in a video
+              using YOLO, a leading AI object detection model.
+            </p>
+            <a href="https://github.com/yash-raj202134/FootyFlow" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/FootyFlow/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text-Summarizer-App -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Text-summarizer-app/">
+            <img src="Images/project-images/TextSummarizer.png" class="card-img-top" alt="Text-summarizer-app">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Text Summarizer Application</h5>
+            <p class="card-text">
+              The Text Summarizer App uses the advanced Google Pegasus SamSum model for effective and efficient text
+              summarization.
+            </p>
+            <a href="https://github.com/yash-raj202134/Text-summarizer-app" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/Text-summarizer-app/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NetGenius -->
+      <div class="col-md-4 mb-4 project-item" data-category="cv">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/NetGenius/">
+            <img src="Images/project-images/tennis.png" class="card-img-top" alt="NetGenius">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">NetGenius</h5>
+            <p class="card-text">
+              AI-Powered Tennis Match Analysis system with YOLO, PyTorch, and Key Point Extraction.
+            </p>
+            <a href="https://github.com/yash-raj202134/NetGenius" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/NetGenius/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GeoLifeCLEF -->
+      <div class="col-md-4 mb-4 project-item" data-category="research">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/GeoLifeCLEF/">
+            <img src="Images/project-images/geoloifecv.jpg" class="card-img-top" alt="GeoLifeCLEF">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">GeoLifeCLEF</h5>
+            <p class="card-text">
+              Dataloaders, sample_data, and example contributions to facilitate the GeoLifeCLEF ongoing RS.
+            </p>
+            <a href="https://github.com/yash-raj202134/GeoLifeCLEF" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source
+            </a>
+            <a href="https://yash-raj202134.github.io/GeoLifeCLEF/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Kidney-Disease-Classification-deep-learning -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Kidney-Disease-Classification-deep-learning/"><img
+              src="Images/project-images/Kidneydisease.png" class="card-img-top" alt="Kidney Disease clf"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Kidney Disease Classification System</h5>
+            <p class="card-text">This Deep Learning project is focused on the end-to-end implementation of Kidney
+              Disease Classification.</p>
+            <a href="https://github.com/yash-raj202134/Kidney-Disease-Classification-deep-learning"
+              class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Kidney-Disease-Classification-deep-learning/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music-recommendation-system -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Music-recommendation-system/"><img
+              src="Images/project-images/Musicrecomm.png" class="card-img-top" alt="Music rec system"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Music Recommendation System</h5>
+            <p class="card-text">A GUI Application that recommends songs based on the current mood of the user.</p>
+            <a href="https://github.com/yash-raj202134/Music-recommendation-system" class="btn btn-primary custom-btn"
+              target="_blank"><i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Music-recommendation-system/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OrderOwl (Food Delivery System Chatbot) -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/OrderOwl/"><img src="Images/project-images/orderowl.jpg"
+              class="card-img-top" alt="OrderOwl"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">OrderOwl</h5>
+            <p class="card-text">OrderOwl is a food delivery chatbot designed to streamline ordering and tracking food
+              orders via a conversational interface.</p>
+            <a href="https://github.com/yash-raj202134/OrderOwl" class="btn btn-primary custom-btn" target="_blank"><i
+                class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/OrderOwl/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CMI Sleep State Detection -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/CMI-sleep-state-detection/"><img
+              src="Images/project-images/sleep.webp" class="card-img-top" alt="CMI sleep state detections"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">CMI Sleep State Detection</h5>
+            <p class="card-text">This project focuses on building a machine learning model to detect sleep onset and
+              wakefulness from wrist-worn accelerometer data.</p>
+            <a href="https://github.com/yash-raj202134/CMI-sleep-state-detection" class="btn btn-primary custom-btn"
+              target="_blank"><i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/CMI-sleep-state-detection/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cell Segmentation Using YOLO v8 -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/cell-segmentation-using-yolov-8/"><img
+              src="Images/project-images/cell.png" class="card-img-top" alt="Cell segmentation"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Cell Segmentation Using YOLO v8</h5>
+            <p class="card-text">A project focused on cell segmentation using YOLO v8, a state-of-the-art model for
+              object detection and segmentation.</p>
+            <a href="https://github.com/yash-raj202134/cell-segmentation-using-yolov-8"
+              class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/cell-segmentation-using-yolov-8/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conversational-Q-A-Chatbot -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Conversational-Q-A-Chatbot/"><img
+              src="Images/project-images/Conversational-Q-A-Chatbot.png" class="card-img-top" alt="qa-chatbot"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Conversational-Q-A-Chatbot</h5>
+            <p class="card-text">A Q&A Chatbot using the Gemini Pro model, integrated with LangChain and Vector DB.</p>
+            <a href="https://github.com/yash-raj202134/Conversational-Q-A-Chatbot" class="btn btn-primary custom-btn"
+              target="_blank"><i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Conversational-Q-A-Chatbot/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GeminiATS -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/GeminiATS/"><img src="Images/project-images/Ats.png"
+              class="card-img-top" alt="GeminiATS"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">GeminiATS</h5>
+            <p class="card-text">An ATS system leveraging Google Gemini to help job seekers optimize their resumes for
+              ATS compatibility.</p>
+            <a href="https://github.com/yash-raj202134/GeminiATS" class="btn btn-primary custom-btn" target="_blank"><i
+                class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/GeminiATS/" class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Audio signal processor and classification system -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Audio-classification/"><img
+              src="Images/project-images/audiosignal.png" class="card-img-top"
+              alt="Audio signal classification system"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Audio Signal Classification System</h5>
+            <p class="card-text">This project uses deep learning techniques for audio signal classification.</p>
+            <a href="https://github.com/yash-raj202134/Audio-classification" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Audio-classification/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TeeWave -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/TeeWave/"><img src="Images/project-images/teewave.jpg"
+              class="card-img-top" alt="TeeWave"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">TeeWave</h5>
+            <p class="card-text">A T-shirt store management application leveraging LangChain, Streamlit, and Chromadb
+              integration.</p>
+            <a href="https://github.com/yash-raj202134/TeeWave" class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/TeeWave/" class="btn btn-secondary custom-btn" target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python World GDP Analysis and Prediction -->
+      <div class="col-md-4 mb-4 project-item" data-category="data-analysis">
+        <div class="card">
+          <a
+            href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-World-GDP-Analysis-and-Prediction">
+            <img src="Images/project-images/worldgdp.jpg" class="card-img-top"
+              alt="World GDP Analysis and Prediction"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Python World GDP Analysis and Prediction</h5>
+            <p class="card-text">A dashboard to explore GDP-related data and predict GDP based on various features.</p>
+            <a href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-World-GDP-Analysis-and-Prediction"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-World-GDP-Analysis-and-Prediction"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python Dashboard Israel-Palestine Conflict Analysis -->
+      <div class="col-md-4 mb-4 project-item" data-category="data-analysis">
+        <div class="card">
+          <a
+            href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-Dashboard-Isreal-Palestian-Conflict-analysis">
+            <img src="Images/project-images/isrealpal.jpg" class="card-img-top"
+              alt="Israel-Palestine Conflict Analysis"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Python Dashboard Israel-Palestine Conflict Analysis</h5>
+            <p class="card-text">A Streamlit-based dashboard that provides insights into the Israel-Palestine conflict
+              using incident data.</p>
+            <a href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-Dashboard-Isreal-Palestian-Conflict-analysis"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://github.com/yash-raj202134/DataAnalysis-Projects/tree/main/Python-Dashboard-Isreal-Palestian-Conflict-analysis"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text-To-SQL LLM App -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Text-To-SQL-LLM-App/"><img src="Images/project-images/TextToSql.png"
+              class="card-img-top" alt="Text to SQL LLM"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Text-To-SQL LLM App</h5>
+            <p class="card-text">An app using Google Gemini Pro to convert natural language into SQL queries and
+              retrieve data.</p>
+            <a href="https://github.com/yash-raj202134/Text-To-SQL-LLM-App" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Text-To-SQL-LLM-App/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Video Transcribe Summarizer -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Youtube-video-transcribe-summarizer/"><img
+              src="Images/project-images/youtube.jpg" class="card-img-top" alt="YouTube Video Transcriber"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">YouTube Video Transcribe Summarizer</h5>
+            <p class="card-text">This application uses Google Gemini Pro to summarize YouTube video transcripts into
+              notes.</p>
+            <a href="https://github.com/yash-raj202134/Youtube-video-transcribe-summarizer"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Youtube-video-transcribe-summarizer/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waste Product Detection Using YOLOv5 -->
+      <div class="col-md-4 mb-4 project-item" data-category="deep-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Waste-product-detection-Using-Yolo-v5/"><img
+              src="Images/project-images/waste.png" class="card-img-top" alt="Waste Product Detection"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Waste Product Detection Using YOLOv5</h5>
+            <p class="card-text">An object detection project using YOLOv5 to detect waste products with fine-tuning
+              techniques.</p>
+            <a href="https://github.com/yash-raj202134/Waste-product-detection-Using-Yolo-v5"
+              class="btn btn-primary custom-btn" target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Waste-product-detection-Using-Yolo-v5/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crop Damage Classification System -->
+      <div class="col-md-4 mb-4 project-item" data-category="cv">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/CropDamageClf"> <img src="Images/project-images/cropdamage.png"
+              class="card-img-top" alt="Crop Damage Classification"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Crop Damage Classification System</h5>
+            <p class="card-text">A computer vision project to classify damaged crops into five categories using deep
+              learning.</p>
+            <a href="https://github.com/yash-raj202134/CropDamageClf" class="btn btn-primary custom-btn"
+              target="_blank">
+              <i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/CropDamageClf/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Chat with multiple pdf-->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/PDF-Chatbot-Pro/"><img src="Images/project-images/pdf_chatbot.png"
+              class="card-img-top" alt="pdfchatbot"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">PDF Chatbot Pro</h5>
+            <p class="card-text">PDF Chatbot Pro is an application that allows you to chat with
+              multiple PDF documents using Langchain and Google Gemini Pro..
+            </p>
+            <a href="https://github.com/yash-raj202134/PDF-Chatbot-Pro" class="btn btn-primary custom-btn"
+              target="_blank"><i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/PDF-Chatbot-Pro/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Multi Language Invoice Extractor application-->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Multi-Language-Invoice-Extractor"><img
+              src="Images/project-images/invoice.webp" class="card-img-top" alt="invoicechat"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Multi-Language Invoice Extractor</h5>
+            <p class="card-text">The Multi-Language Invoice Extractor is an application that uses Google
+              Gemini Pro's large language model (LLM) to process and extract relevant information from
+              invoices written in multiple languages..
+            </p>
+            <a href="https://github.com/yash-raj202134/Multi-Language-Invoice-Extractor"
+              class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Multi-Language-Invoice-Extractor/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Binary Prediction of smoker status -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Binary-prediction-of-smoker-status/"><img
+              src="Images/project-images/binarypredictionsmokerstatus.png" class="card-img-top" alt="smokerstat"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Binary Prediction of smoker status using Bio-signals</h5>
+            <p class="card-text">Binary classification model to predict a patient's smoking status
+              given information about various other health indicators or bio-signals..
+            </p>
+            <a href="https://github.com/yash-raj202134/Binary-prediction-of-smoker-status"
+              class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Binary-prediction-of-smoker-status/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Multiclass prediction of liver cirrhosis -->
+      <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/Multiclass-prediction-of-liver-cirrhosis/"><img
+              src="Images/project-images/livercirrhosis.jpg" class="card-img-top" alt="livercirrhosis"></a>
+
+          <div class="card-body">
+            <h5 class="card-title">Multiclass prediction of liver cirrhosis</h5>
+            <p class="card-text">Develop a machine learning model using 17 clinical features to predict
+              the survival state of patients with liver cirrhosis..
+            </p>
+            <a href="https://github.com/yash-raj202134/Multiclass-prediction-of-liver-cirrhosis"
+              class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/Multiclass-prediction-of-liver-cirrhosis/"
+              class="btn btn-secondary custom-btn" target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Bedrock Navigator  -->
+      <div class="col-md-4 mb-4 project-item" data-category="genai">
+        <div class="card">
+          <a href="https://yash-raj202134.github.io/BedrockNavigator/"><img src="Images/project-images/ragapp.jpg"
+              class="card-img-top" alt="Bedrock Navigator">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Bedrock Navigator </h5>
+            <p class="card-text">Welcome to the Advanced RAG App, a powerful
+              application that leverages AWS Bedrock and LangChain to provide
+              intelligent Retrieval Augmented Generation (RAG) capabilities..
+            </p>
+            <a href="https://github.com/yash-raj202134/BedrockNavigator" class="btn btn-primary custom-btn"
+              target="_blank"><i class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yash-raj202134.github.io/BedrockNavigator/" class="btn btn-secondary custom-btn"
+              target="_blank">
+              Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- My portfolio website  -->
+      <div class="col-md-4 mb-4 project-item" data-category="web-development">
+        <div class="card">
+          <a href="https://yashraj121.netlify.app/"><img src="Images/project-images/mywebsite.jpg" class="card-img-top"
+              alt="portfolio">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">My Portfolio website</h5>
+            <p class="card-text">This is my personal Portfolio website developed using html css and js purely..
+            </p>
+            <a href="https://github.com/yash-raj202134/portfolio" class="btn btn-primary custom-btn" target="_blank"><i
+                class="fab fa-github" style="margin-right: 8px;"></i>Source</a>
+            <a href="https://yashraj121.netlify.app/" class="btn btn-secondary custom-btn" target="_blank">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modern Footer -->
+  <footer class="modern-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3><i class="fas fa-code"></i> About</h3>
+          <p>
+            I'm Yash Raj, a Computer Science Engineer specializing in Machine Learning and Data Science. Passionate
+            about developing innovative solutions and continuously learning new technologies.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+          <h3><i class="fas fa-address-card"></i> Contact</h3>
+          <ul class="footer-links footer-contact">
+            <li><i class="fas fa-phone"></i> +91 7644849436</li>
+            <li><i class="fas fa-envelope"></i> yashraj3376@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Haryana, India</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3><i class="fas fa-link"></i> Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="blog-listing.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="index.html#papers"><i class="fas fa-chevron-right"></i> Papers</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+          <h3><i class="fas fa-share-alt"></i> Follow Me</h3>
+          <div class="social-links">
+            <a href="https://github.com/yash-raj202134" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yash-raj-8b924a296/" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/YashRaj07880847" target="_blank" class="social-link" title="Twitter/X">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/raj_yash_00/" target="_blank" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.kaggle.com/yashraj121" target="_blank" class="social-link" title="Kaggle">
+              <i class="fab fa-kaggle"></i>
+            </a>
+          </div>
+          
+          <!-- Newsletter -->
+          <form class="newsletter-form" name="submit-to-google-sheet">
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yash Raj. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/newsletter-subscription.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filter projects
+          projectItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
