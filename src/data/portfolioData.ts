@@ -61,6 +61,15 @@ export interface Education {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "GeoStitch — Drone to GeoTIFF Pipeline",
+    description: "End-to-end pipeline converting georeferenced drone video into stitched GeoTIFF maps using SIFT feature matching, RANSAC homography, and GCP-based georeferencing.",
+    image: "/Images/project-images/stitched_result.png",
+    category: "machine-learning",
+    sourceLink: "https://github.com/yash-raj202134/GeoStitch",
+    detailsLink: "https://yash-raj202134.github.io/"
+  },
+  {
+    id: 2,
     title: "TalentOptimize-AI-Powered-Recruitment-Solutions",
     description: "Leveraging Python libraries and algorithms to optimize the hiring process and revolutionize job placement strategies with machine learning insights.",
     image: "/Images/project-images/HRrec.jpg",
@@ -69,22 +78,13 @@ export const projects: Project[] = [
     detailsLink: "https://yash-raj202134.github.io/TalentOptimize-AI-Powered-Recruitment-Solutions/"
   },
   {
-    id: 2,
+    id: 3,
     title: "RecommendaFy-Project",
     description: "An e-commerce recommendation system using Python Flask and machine learning to provide personalized product recommendations to users.",
     image: "/Images/project-images/ecomrec.jpg",
     category: "machine-learning",
     sourceLink: "https://github.com/yash-raj202134/RecommendaFy-Project",
     detailsLink: "https://yash-raj202134.github.io/RecommendaFy-Project/"
-  },
-  {
-    id: 3,
-    title: "GeoLifeCLEF-LifeCLEF-CVPR-FGVC",
-    description: "The Species Composition Prediction project aims to predict plant species in a given location and time using various predictors such as satellite images, climatic time series, and other rasterized environmental data.",
-    image: "/Images/project-images/geolifeclef.jpg",
-    category: "research",
-    sourceLink: "https://github.com/yash-raj202134/GeoLifeCLEF-LifeCLEF-CVPR-FGVC",
-    detailsLink: "https://yash-raj202134.github.io/GeoLifeCLEF-LifeCLEF-CVPR-FGVC/"
   }
 ];
 
@@ -125,7 +125,7 @@ export const allProjects: Project[] = [
     category: "nlp",
     sourceLink: "https://github.com/yash-raj202134",
     detailsLink: "https://yash-raj202134.github.io/"
-  }
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -299,25 +299,20 @@ export const skillCategories: SkillCategory[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Software Developer Engineer",
+    title: "Software Engineer – AI/ML",
+    company: "ProSkep Solutions LLP",
+    period: "Jul 2025 – Present"
+  },
+  {
+    title: "Software Development Engineer",
     company: "AST Consulting",
-    period: "Nov 2024 - Present"
+    period: "Nov 2024 – Mar 2025"
   },
   {
-    title: "Machine Learning-LMS Research Intern",
-    company: "Ignitus WorldWide Co",
-    period: "Feb 2024 - Aug 2024"
+    title: "ML Research Intern",
+    company: "Ignitus Labs",
+    period: "Feb 2024 – Aug 2024"
   },
-  {
-    title: "Research Intern",
-    company: "Central University of Haryana",
-    period: "Sep 2023 - Jan 2024"
-  },
-  {
-    title: "Machine Learning Intern",
-    company: "Cloud Counselage Pvt. Ltd.",
-    period: "Jul 2023 - Sep 2023"
-  }
 ];
 
 export const education: Education[] = [
@@ -402,6 +397,6 @@ export const contactInfo = {
   email: "yashraj3376@gmail.com",
   phone: "+91 7644849436",
   whatsapp: "+91 7644849436",
-  address: "Central University of Haryana, near Gate no 2, Pali, Mahendergarh 123029, Haryana",
+  address: "New Delhi, Delhi, India",
   web3formsKey: "4ccdb722-03b1-494b-99ff-388a411d1fe0"
 };

@@ -118,7 +118,7 @@ export default function Hero() {
             className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             A forward-thinking{' '}
-            <span className="text-white font-semibold">Computer Science Engineer</span>{' '}
+            <span className="text-white font-semibold">AI/ML Engineer</span>{' '}
             specializing in{' '}
             <span className="text-gradient font-semibold">Data Science</span>
             {' '}and{' '}

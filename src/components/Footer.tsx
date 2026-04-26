@@ -73,7 +73,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-4 h-4 mt-1" />
-                <span>Haryana, India</span>
+                <span>Delhi, India</span>
               </li>
             </ul>
           </motion.div>

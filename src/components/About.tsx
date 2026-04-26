@@ -89,13 +89,16 @@ export default function About() {
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                As a passionate <span className="text-gray-900 font-semibold">Computer Science Engineer</span>, I'm captivated by the transformative power of data science and artificial intelligence. The ability to extract meaningful insights from vast amounts of data and use them to solve real-world problems is what drives my pursuit of a career in this field.
+                My fascination with AI began way back in 2008 when I first watched <span className="text-gray-900 font-semibold">Iron Man</span> — I was captivated by JARVIS. That intelligent, conversational AI that could understand, assist, and execute complex tasks felt like pure magic. I knew then that someday, I wanted to build something like that.
               </p>
               <p>
-                My journey into data science began with a simple curiosity about how technology could be leveraged to make better decisions. As I delved deeper, I realized that data science offers endless possibilities to innovate and create positive change across various industries.
+                Fast forward to my school days in 2018 when I wrote my first program — I wasn't just learning to code; I was trying to bring JARVIS to life. I <span className="text-gray-900 font-semibold">connected Google Assistant to my computer</span> and successfully controlled my PC with voice commands. That small victory ignited something in me. When my peers were exploring web development and app building, I was drawn toward something different — I chose the path of <span className="text-gray-900 font-semibold">Machine Learning and Data Science</span>.
               </p>
               <p>
-                What motivates me most is the potential to contribute to groundbreaking discoveries and innovations that can improve lives and shape the future. I'm excited by the rapid advancements in AI and how they're revolutionizing the way we interact with technology.
+                Then came <span className="text-gray-900 font-semibold">November 2022</span> — ChatGPT was released to the world. Seeing an AI communicate with human-like fluency, reason through problems, and assist with complex tasks was my moment of clarity. This was what I had envisioned since childhood. My goal crystallized: I wanted to master this technology, understand its architecture deeply, and build systems that could automate the repetitive tasks we perform daily.
+              </p>
+              <p>
+                From GPT to <span className="text-gray-900 font-semibold">RAG systems</span> to <span className="text-gray-900 font-semibold">Autonomous Agents</span> — I've been on a relentless journey of learning and building. Today, as an <span className="text-gray-900 font-semibold">AI/ML Engineer</span>, I don't just develop AI systems; I craft intelligent solutions that bridge the gap between imagination and reality. Every project is a step closer to that childhood dream of building something as transformative as JARVIS — systems that don't just compute, but truly <span className="text-gray-900 font-semibold">understand and assist</span>.
               </p>
             </div>
           </motion.div>
@@ -118,10 +121,10 @@ export default function About() {
               <h3 className="text-xl font-bold text-gray-900">Background</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              Innovative Computer Science Engineer specializing in machine learning and data science. Passionate about leveraging technical skills in AI and data analytics to solve complex problems. Extensive experience in developing advanced machine learning models and deploying them across various industries.
+              AI/ML Engineer with production experience in LLM fine-tuning, autonomous agent systems, and high-throughput inference optimization. Built and shipped enterprise-grade AI systems achieving 30–35% latency reduction and 90%+ task accuracy. Deep expertise in open-source LLM ecosystems (vLLM, llama.cpp, Hugging Face), multi-tool agent architectures, RAG pipelines, and scalable MLOps.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Skilled in collaborating with multidisciplinary teams to drive impactful projects from concept to completion. Continuously seeking opportunities to enhance technical knowledge and stay at the forefront of technological advancements.
+              UGC NET JRF qualified — 98.17 percentile (2024). Skilled in collaborating with multidisciplinary teams to drive impactful projects from concept to completion. Continuously seeking opportunities to enhance technical knowledge and stay at the forefront of AI advancements.
             </p>
           </motion.div>
 
@@ -160,24 +163,28 @@ export default function About() {
               <div className="p-3 rounded-xl bg-orange-500/10 text-orange-600">
                 <Code className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Skills</h3>
+              <h3 className="text-xl font-bold text-gray-900">Technical Skills</h3>
             </div>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-gray-900">Programming Languages (5+ years)</h4>
-                <p className="text-sm text-gray-600">Python, C, C++, R, JavaScript, SQL</p>
+                <h4 className="font-medium text-gray-900">Core ML / AI</h4>
+                <p className="text-sm text-gray-600">PyTorch, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Multimodal Learning</p>
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">AI & Data Science (2+ years)</h4>
-                <p className="text-sm text-gray-600">Machine Learning, Deep Learning, NN, GenAI, Data Analysis, Visualization</p>
+                <h4 className="font-medium text-gray-900">LLM & GenAI</h4>
+                <p className="text-sm text-gray-600">LLM Fine-tuning (LoRA, QLoRA, PEFT), RAG Systems, Autonomous AI Agents, Tool Calling, Vision-Language Models</p>
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">Libraries & Frameworks</h4>
-                <p className="text-sm text-gray-600">Pandas, NumPy, TensorFlow, Keras, PyTorch, Scikit-learn, OpenCV, Flask</p>
+                <h4 className="font-medium text-gray-900">Inference & Optimization</h4>
+                <p className="text-sm text-gray-600">vLLM, Ollama, llama.cpp, ONNX, TensorRT, Quantization, Pruning</p>
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">Tools & Technologies</h4>
-                <p className="text-sm text-gray-600">Git/GitHub, Docker, AWS, Azure, GCP, MLflow, MySQL, PowerBI</p>
+                <h4 className="font-medium text-gray-900">MLOps & Cloud</h4>
+                <p className="text-sm text-gray-600">MLflow, DVC, Docker, GitHub Actions, AWS (EC2, S3), Azure Container Apps, Apache Spark</p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900">Languages & APIs</h4>
+                <p className="text-sm text-gray-600">Python, SQL, C++, JavaScript, FastAPI, REST API</p>
               </div>
             </div>
           </motion.div>
